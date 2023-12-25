@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import { TextField } from '@mui/material';
+import mistletoe from './assets/mistletoe.png';
 
 function App() {
   const [chosenAnimal, setChosenAnimal] = useState<
@@ -15,7 +16,19 @@ function App() {
   const [disablePhoneticAnswer, setDisablePhoneticAnswer] = useState(false);
   return (
     <div>
-      <h1>Merry Christmas!</h1>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '10px',
+          flexDirection: 'row',
+        }}
+      >
+        <img src={mistletoe} alt="Holly" className="holly mirror" />
+        <h1>Merry Christmas!</h1>
+        <img src={mistletoe} alt="Holly" className="holly" />
+      </div>
       <p>Pick an animal</p>
       <button
         onClick={() => setChosenAnimal('chicken')}

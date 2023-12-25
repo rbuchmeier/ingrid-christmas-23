@@ -12,6 +12,15 @@ h1 {
   font-size: 2em;
 }
 
+.holly {
+  width: 20px;
+    height: 20px;
+}
+
+.mirror {
+    transform: scaleX(-1);
+}
+
 button {
   background-color: #2b8d33; /* Christmas Green */
   color: white;
