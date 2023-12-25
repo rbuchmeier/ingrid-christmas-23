@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import { TextField } from '@mui/material';
 
 function App() {
   const [chosenAnimal, setChosenAnimal] = useState<
@@ -56,7 +57,7 @@ function App() {
       {chosenAnimal === 'pig' && (
         <>
           <p>What is a mama pig called?</p>
-          <input
+          <TextField
             value={mamaPig}
             onChange={(e) => {
               setMamaPig(e.target.value);
@@ -69,7 +70,7 @@ function App() {
           {mamaPig.toLowerCase() === 'sow' && (
             <>
               <p>What is the opposite of max?</p>
-              <input
+              <TextField
                 value={minAnswer}
                 onChange={(e) => {
                   setMinAnswer(e.target.value);
@@ -82,7 +83,7 @@ function App() {
               {minAnswer.toLowerCase() === 'min' && (
                 <>
                   <p>Put those words together phonetically</p>
-                  <input
+                  <TextField
                     value={phoneticAnswer}
                     onChange={(e) => {
                       setPhoneticAnswer(e.target.value);
